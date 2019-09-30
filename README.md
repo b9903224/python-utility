@@ -2,7 +2,7 @@
 commonly used package
 
 
-## printUniqueRatio
+## [printUniqueRatio](utility/printUniqueRatio.py)
 ```python
 import random
 import utility
