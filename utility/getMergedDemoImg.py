@@ -54,7 +54,7 @@ def insert_descp_text(mergedDemoImg, descp_text, imgH, imgW,
         x = descp_test_start_x[row_num]
         for col_num, descp in enumerate(descp_row):
             y = y0 + font_size*col_num
-            print(y)
+#            print(y)
             if len(descp) == 0:
                 continue
             draw.text((x,y), descp, tuple(font_rgb), font=font)
