@@ -54,6 +54,8 @@ plt.plot(y3_ary_filtered, linestyle='--')
 plt.ylim([0, imgH])
 plt.title('trend down')
 plt.savefig('plot.png', dpi=512)
+```
+```python
 ![image](https://github.com/b9903224/python-utility/blob/master/demo/getMergedDemoImg/plot.png)
 
 # generate image: rgb_uint8, gray_uint8, bool
@@ -84,8 +86,10 @@ plt.imshow(img3, cmap=plt.cm.gray), plt.title('%g (bool)'%index)
 plt.subplot(2,3,index+3)
 plt.imshow(img3_filtered, cmap=plt.cm.gray), plt.title('%g_filtered'%index)
 plt.savefig('subplot_img.png', dpi=512)
+```
 ![image](https://github.com/b9903224/python-utility/blob/master/demo/getMergedDemoImg/subplot_img.png)
 
+```python
 # prepare data
 row_num = 2
 col_num = 5
@@ -115,15 +119,12 @@ mergedDemoImg = utility.getMergedDemoImg(row_num, col_num, imgH, imgW,
                                          font_path, font_size, font_rgb, font_background_rgb,
                                          demo_background_rgb, append_height, descp_text,
                                          descp_test_start_y, descp_test_start_x)
-
-
 plt.figure(3)
 plt.imshow(mergedDemoImg), plt.title('mergedDemoImg')
-![image](https://github.com/b9903224/python-utility/blob/master/demo/getMergedDemoImg/subplot_img.png)
-https://github.com/b9903224/python-utility/blob/master/demo/getMergedDemoImg/mergedDemoImg.png
-
 Image.fromarray(mergedDemoImg).save(r'.\mergedDemoImg.png')
 ```
+![image](https://github.com/b9903224/python-utility/blob/master/demo/getMergedDemoImg/subplot_img.png)
+https://github.com/b9903224/python-utility/blob/master/demo/getMergedDemoImg/mergedDemoImg.png
 
 ## [printUniqueRatio](utility/printUniqueRatio.py)
 ```python
