@@ -55,8 +55,8 @@ plt.ylim([0, imgH])
 plt.title('trend down')
 plt.savefig('plot.png', dpi=512)
 ```
-```python
 ![image](https://github.com/b9903224/python-utility/blob/master/demo/getMergedDemoImg/plot.png)
+```python
 
 # generate image: rgb_uint8, gray_uint8, bool
 img1 = getBwImgByChartData(imgH, imgW, y1_ary, 'rgb')
@@ -123,8 +123,8 @@ plt.figure(3)
 plt.imshow(mergedDemoImg), plt.title('mergedDemoImg')
 Image.fromarray(mergedDemoImg).save(r'.\mergedDemoImg.png')
 ```
-![image](https://github.com/b9903224/python-utility/blob/master/demo/getMergedDemoImg/subplot_img.png)
-https://github.com/b9903224/python-utility/blob/master/demo/getMergedDemoImg/mergedDemoImg.png
+![image](https://github.com/b9903224/python-utility/blob/master/demo/getMergedDemoImg/mergedDemoImg.png)
+
 
 ## [printUniqueRatio](utility/printUniqueRatio.py)
 ```python
