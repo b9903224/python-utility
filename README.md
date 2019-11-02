@@ -1,4 +1,5 @@
 # python-utility
+@ Ming-Chih, Hsiao
 commonly used package
 
 ## [getMergedDemoImg](utility/getMergedDemoImg.py)
