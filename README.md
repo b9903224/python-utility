@@ -68,6 +68,7 @@ utility.imshow(img_rgb_G, 'img_rgb_G').savefig(r'.\demo\imshow\img_rgb_G.png', d
 utility.imshow(img_rgb_B, 'img_rgb_B').savefig(r'.\demo\imshow\img_rgb_B.png', dpi=dpi)
 ```
 <img src="https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_bw_false.png" width="500px" />
+<img src="https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_bw_true.png" width="500px" />
 
 ## [getHighLightImg](utility/getHighLightImg.py)
 ```python
