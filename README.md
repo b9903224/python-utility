@@ -69,7 +69,7 @@ utility.imshow(img_rgb_B, 'img_rgb_B').savefig(r'.\demo\imshow\img_rgb_B.png', d
 ```
 <!-- ![image]()-->
 ![image](https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_bw_false.png)
-![image](https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_bw_false.png =200x)
+![image](https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_bw_false.png){:height="50%" width="50%"}
 
 ## [getHighLightImg](utility/getHighLightImg.py)
 ```python
