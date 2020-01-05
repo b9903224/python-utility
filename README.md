@@ -66,8 +66,9 @@ utility.imshow(img_rgb_R, 'img_rgb_R').savefig(r'.\demo\imshow\img_rgb_R.png', d
 utility.imshow(img_rgb_G, 'img_rgb_G').savefig(r'.\demo\imshow\img_rgb_G.png', dpi=dpi)
 utility.imshow(img_rgb_B, 'img_rgb_B').savefig(r'.\demo\imshow\img_rgb_B.png', dpi=dpi)
 ```
-![image]()
+<!-- ![image]()-->
 ![image](https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_bw_false.png)
+![image](https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_bw_false.png =200px)
 
 ## [getHighLightImg](utility/getHighLightImg.py)
 ```python
