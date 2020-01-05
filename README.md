@@ -69,6 +69,7 @@ utility.imshow(img_rgb_B, 'img_rgb_B').savefig(r'.\demo\imshow\img_rgb_B.png', d
 ```
 <img src="https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_bw_false.png" width="250px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_bw_true.png" width="250px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_bw_mix.png" width="250px" />
 <img src="https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_gray_0.png" width="250px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_gray_127.png" width="250px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_gray_255.png" width="250px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_gray_mix.png" width="250px" />
+
 <img src="https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_rgb_black.png" width="250px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_rgb_gray.png" width="250px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_rgb_white.png" width="250px" />
 <img src="https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_rgb_R.png" width="250px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_rgb_G.png" width="250px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_rgb_B.png" width="250px" />
 
