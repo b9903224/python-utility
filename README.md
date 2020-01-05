@@ -5,11 +5,7 @@ commonly used package
 
 
 ## [getHighLightImg](utility/getHighLightImg.py)
-## [getImgSize](utility/getImgSize.py)
-## [imshow](utility/imshow.py)
-
 ```python
-
 import numpy as np
 import matplotlib.pyplot as plt
 from skimage import io, morphology, color
