@@ -122,9 +122,7 @@ if __name__ == '__main__':
     utility.imshow(img_rgb_bounding2, 'img_rgb_bounding2')
     utility.imshow(img_rgb_bounding3, 'img_rgb_bounding3')
 ```
-![image](https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImg/result/img_bw.png)
-![image](https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImg/result/img_gray.png)
-![image](https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImg/result/img_rgb.png)
+<img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImg/result/img_bw.png" width="250px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImg/result/img_gray.png" width="250px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImg/result/img_rgb.png" width="250px" />
 ![image](https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImg/result/boundingFilter_bwAndGray.png)
 ![image](https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImg/result/boundingFilter_rgb.png)
 ![image](https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImg/result/img_bw_bounding.png)
