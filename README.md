@@ -4,6 +4,7 @@
 commonly used package
 
 ## [imshow](utility/imshow.py)
+Customized for matploblib.pyplot
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -68,7 +69,7 @@ utility.imshow(img_rgb_B, 'img_rgb_B').savefig(r'.\demo\imshow\img_rgb_B.png', d
 ```
 <!-- ![image]()-->
 ![image](https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_bw_false.png)
-![image](https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_bw_false.png =200px)
+![image](https://github.com/b9903224/python-utility/blob/master/demo/imshow/img_bw_false.png =200x)
 
 ## [getHighLightImg](utility/getHighLightImg.py)
 ```python
