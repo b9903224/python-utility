@@ -58,7 +58,7 @@ io.imsave(r'%s\%s.png'%(path, 'img_bw_demo2'), img_bw_demo2)
 ```
 <img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/stringImg.png" width="250px" />
 <img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_rgb.png" width="250px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_gray.png" width="250px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_bw.png" width="250px" />
-<img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_rgb_demo.png" width="250px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_rgb_demo2.png" width="250px" />
+<img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_rgb_demo.png" width="220px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_rgb_demo2.png" width="220px" />
 
 <img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_gray_demo.png" width="250px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_gray_demo2.png" width="250px" />
 
