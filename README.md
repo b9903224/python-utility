@@ -20,7 +20,7 @@ if __name__ == '__main__':
     io.imsave(r'.\demo\font_template\font_template_%s.png'%(font_file_name), fontTemplateImg)
     utility.imshow(fontTemplateImg, 'fontTemplateImg')
 ```
-<img src="https://github.com/b9903224/python-utility/blob/master/demo/font_template/font_template_EightBitDragon-anqx.png"/><img
+<img src="https://github.com/b9903224/python-utility/blob/master/demo/font_template/font_template_EightBitDragon-anqx.png"/>
 
 
 ## [imshow](utility/imshow.py)
