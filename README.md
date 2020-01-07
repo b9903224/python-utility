@@ -20,6 +20,7 @@ if __name__ == '__main__':
     io.imsave(r'.\demo\font_template\font_template_%s.png'%(font_file_name), fontTemplateImg)
     utility.imshow(fontTemplateImg, 'fontTemplateImg')
 ```
+https://www.fontspace.com/chequered-ink/eight-bit-dragon
 <img src="https://github.com/b9903224/python-utility/blob/master/demo/font_template/font_template_EightBitDragon-anqx.png"/>
 
 
