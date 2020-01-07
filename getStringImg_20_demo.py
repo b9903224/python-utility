@@ -1,20 +1,10 @@
 # -*- coding: utf-8 -*-
 
-import numpy as np
-import cv2
 import matplotlib.pyplot as plt
 import utility
-from skimage import io, transform
-import numpy as np
-from PIL import ImageFont, ImageDraw, Image
-import os
-import random
-from utility.getFontTemplateImg import getFontTemplateImg
-from time import time
+from skimage import transform
 
-#text = ' '
 plt.close('all')
-
 
 text = r'''abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`~!@#$%^&*()-_=+[{]}\|;:'",<.>/? 我'''
 stringImg = utility.getStringImg_20(text)
