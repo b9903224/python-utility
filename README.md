@@ -3,6 +3,27 @@
 
 commonly used package
 
+## [getFontTemplateImg](utility/getFontTemplateImg.py)
+Output font image by font file
+```python
+import utility
+from skimage import io
+import os
+from utility.getFontTemplateImg import getFontTemplateImg
+
+if __name__ == '__main__':
+    font_path = r'.\demo\font\EightBitDragon-anqx.ttf'
+    imgH = 20 # = font_size
+    imgW = 1300
+    fontTemplateImg = getFontTemplateImg(imgH, imgW, font_path)
+    font_file_name = os.path.splitext(os.path.basename(font_path))[0] # get fileName without extention
+    io.imsave(r'.\demo\font_template\font_template_%s.png'%(font_file_name), fontTemplateImg)
+    utility.imshow(fontTemplateImg, 'fontTemplateImg')
+```
+https://www.fontspace.com/chequered-ink/eight-bit-dragon
+<img src="https://github.com/b9903224/python-utility/blob/master/demo/font_template/font_template_EightBitDragon-anqx.png"/>
+
+
 ## [imshow](utility/imshow.py)
 Customized for matploblib.pyplot
 ```python
