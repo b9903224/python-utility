@@ -10,6 +10,7 @@ from .getMergedDemoImg import getMergedDemoImg
 from .getHighLightImg import getHighLightImg
 from .getImgSize import getImgSize
 from .imshow import imshow
+from .getStringImg_20 import getStringImg_20
 
 __all__ = ['printUniqueRatio',
            'getMergedDemoImg',

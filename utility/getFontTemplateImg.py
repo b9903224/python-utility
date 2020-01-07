@@ -10,16 +10,16 @@ import numpy as np
 #from skimage import io
 from PIL import ImageFont, ImageDraw, Image
 
-text = r'''abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`~!@#$%^&*()-_=+[{]}\|;:'",<.>/? '''
+text = r'''abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`~!@#$%^&*()-_=+[{]}\|;:'",<.>/?'''
 
-def getFontTemplateImg(imgH, imgW, font_path):
+def getFontTemplateImg(imgH, imgW, font_path, x_ori=0, y_ori=0):
     img = getImgRGBSample(imgH, imgW)
     font_size = imgH
     font_rgb = [255,255,255]
     font = ImageFont.truetype(font_path, font_size)
     frame = Image.fromarray(img)
     draw = ImageDraw.Draw(frame)
-    draw.text((0,0), text, tuple(font_rgb), font=font)
+    draw.text((x_ori, y_ori), text, tuple(font_rgb), font=font)
     img_text = np.array(frame)
     img_text = img_text[:,:,0]
     
