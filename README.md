@@ -4,7 +4,7 @@
 commonly used package
 
 ## [getFontTemplateImg](utility/getFontTemplateImg.py)
-
+Get binary text image not use font file.
 ```python
 import matplotlib.pyplot as plt
 import utility
