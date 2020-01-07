@@ -11,6 +11,7 @@ from .getHighLightImg import getHighLightImg
 from .getImgSize import getImgSize
 from .imshow import imshow
 from .getStringImg_20 import getStringImg_20
+from .getHighLightImgByRange import getHighLightImgByRange
 
 __all__ = ['printUniqueRatio',
            'getMergedDemoImg',
