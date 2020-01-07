@@ -57,15 +57,10 @@ io.imsave(r'%s\%s.png'%(path, 'img_bw_demo'), img_bw_demo)
 io.imsave(r'%s\%s.png'%(path, 'img_bw_demo2'), img_bw_demo2)
 ```
 <img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/stringImg.png"/>
-<img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_rgb"/>
-<img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_gray.png"/>
-<img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_bw.png"/>
-<img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_rgb_demo.png"/>
-<img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_rgb_demo2.png"/>
-<img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_gray_demo.png"/>
-<img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_gray_demo2.png"/>
-<img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_bw_demo.png"/>
-<img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_bw_demo2.png"/>
+<img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_rgb.png"/><img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_gray.png"/><img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_bw.png"/>
+<img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_rgb_demo.png"/><img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_rgb_demo2.png"/>
+<img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_gray_demo.png"/><img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_gray_demo2.png"/>
+<img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_bw_demo.png"/><img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_bw_demo2.png"/>
 
 ## [getFontTemplateImg](utility/getFontTemplateImg.py)
 Get binary text image not use font file.
