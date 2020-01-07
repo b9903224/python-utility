@@ -1,12 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import numpy as np
-import cv2
-import matplotlib.pyplot as plt
 import utility
 from skimage import io
-import numpy as np
-from PIL import ImageFont, ImageDraw, Image
 import os
 from utility.getFontTemplateImg import getFontTemplateImg
 
