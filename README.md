@@ -65,7 +65,7 @@ io.imsave(r'%s\%s.png'%(path, 'img_bw_demo2'), img_bw_demo2)
 
 <img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_bw_demo.png" width="250px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/getHighLightImgByRange/img_bw_demo2.png" width="250px" />
 
-## [getFontTemplateImg](utility/getFontTemplateImg.py)
+## [getStringImg_20](utility/getStringImg_20.py)
 Get binary text image not use font file.
 ```python
 import matplotlib.pyplot as plt
