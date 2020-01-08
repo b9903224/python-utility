@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import utility
 from skimage import io
 from skimage.color import rgb2gray
-
+import time
 plt.close('all')
 
 text = r'Hello World !'
@@ -23,12 +23,15 @@ xStart = 80
 #xStart = 4
 #yStart = 4
 #xStart = 335
+tStart = time.time()
 img_rgb_demo = utility.getHighLightImgByRange(stringImg, img_rgb, yStart, xStart)
 img_rgb_demo2 = utility.getHighLightImgByRange(stringImg, img_rgb, yStart, xStart, rgb=[0, 0, 50], isTransparent=True, rgbBackground=[50,50,0])
 img_gray_demo = utility.getHighLightImgByRange(stringImg, img_gray, yStart, xStart)
 img_gray_demo2 = utility.getHighLightImgByRange(stringImg, img_gray, yStart, xStart, rgb=[0, 0, 50], isTransparent=True, rgbBackground=[50,50,0])
 img_bw_demo = utility.getHighLightImgByRange(stringImg, img_bw, yStart, xStart)
 img_bw_demo2 = utility.getHighLightImgByRange(stringImg, img_bw, yStart, xStart, rgb=[0, 0, 50], isTransparent=True, rgbBackground=[50,50,0])
+tEnd = time.time()
+print('Elapsed time is %g seconds.'%(tEnd-tStart))
 
 path = r'.\demo\getHighLightImgByRange'
 dpi = 512

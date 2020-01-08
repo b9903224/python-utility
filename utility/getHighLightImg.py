@@ -22,7 +22,7 @@ def getHighLightImg(destImg, sourceImg, rgb=[255, 0, 0], isTransparent=False, rg
         resultImg = np.dstack((resultImg, resultImg, resultImg))
         
     
-    resultImg = resultImg.astype(np.float)
+    resultImg = resultImg.astype(np.int16)
     for ch in range(3):
         resultImg_ch = resultImg[:,:,ch]
         if not isTransparent:

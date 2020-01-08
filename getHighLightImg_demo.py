@@ -9,6 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from skimage import io, morphology, color
 import utility
+import time
 #from utility.getHighLightImg import getImgSize
 
 def loadImg():
@@ -34,11 +35,15 @@ if __name__ == '__main__':
     img_bw, img_gray, img_rgb = loadImg()
     boundingFilter_bwAndGray = getBoundingFilter_bwAndGray(img_bw)
     boundingFilter_rgb = getBoundingFilter_rgb(img_rgb)
+    
+    tStart = time.time()
     img_bw_bounding = utility.getHighLightImg(boundingFilter_bwAndGray, img_bw)
     img_gray_bounding = utility.getHighLightImg(boundingFilter_bwAndGray, img_gray)
     img_rgb_bounding = utility.getHighLightImg(boundingFilter_rgb, img_rgb)
     img_rgb_bounding2 = utility.getHighLightImg(boundingFilter_rgb, img_rgb, rgb=[128, 0, 0], isTransparent=True, rgbBackground=[0,60,0])
     img_rgb_bounding3 = utility.getHighLightImg(boundingFilter_rgb, img_rgb, rgb=[-128, -128, 0], isTransparent=True, rgbBackground=[0,60,0])
+    tEnd = time.time()
+    print('Elapsed time is %g seconds.'%(tEnd-tStart))
     ##
 
     utility.imshow(img_bw, 'img_bw')

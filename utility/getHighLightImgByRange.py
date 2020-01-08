@@ -19,6 +19,7 @@ def getHighLightImgByRange(destImg, sourceImg, yStart, xStart, rgb=[255, 0, 0], 
     xEnd = min(xStart+imgW_dest-1, imgW_src-1)
     destImg_sub = destImg[0:yEnd-yStart+1, 0:xEnd-xStart+1]
     resultImg_sub = resultImg[yStart:yEnd+1,xStart:xEnd+1,:]
+    resultImg_sub = resultImg_sub.astype(np.int16)
     destImg_sub_inv = np.invert(destImg_sub)
     for ch in range(3):
         resultImg_sub_ch = resultImg_sub[:,:,ch]
@@ -31,8 +32,8 @@ def getHighLightImgByRange(destImg, sourceImg, yStart, xStart, rgb=[255, 0, 0], 
             resultImg_sub_ch[destImg_sub_inv] = resultImg_sub_ch[destImg_sub_inv] + rgbBackground[ch]
         resultImg_sub[:,:,ch] = resultImg_sub_ch
     
+    resultImg_sub = finalizeResultImg(resultImg_sub)
     resultImg[yStart:yEnd+1,xStart:xEnd+1,:] = resultImg_sub
-    resultImg = finalizeResultImg(resultImg)
     return resultImg
 
 def finalizeResultImg(resultImg):
@@ -48,7 +49,7 @@ def iniResultImg(sourceImg):
     imgH, imgW, imgZ = getImgSize(resultImg)
     if imgZ == 0:
         resultImg = np.dstack((resultImg, resultImg, resultImg))
-    resultImg = resultImg.astype(np.float)
+#    resultImg = resultImg.astype(np.float)
     return resultImg
 
 def getImgSize(img):
