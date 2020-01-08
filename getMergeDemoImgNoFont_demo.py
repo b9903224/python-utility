@@ -4,12 +4,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy import signal
 import utility
+import time
+from skimage import io
 
 # config
 plt.close('all')
 imgH = 60
 imgW = 60
 kernel_size = 5
+
+demoPath = r'.\demo\getMergeDemoImgNoFont'
+dpi = 512
 
 def getBwImgByChartData(imgH, imgW, y1_ary, imgType):
     y1_ary = y1_ary.astype(np.int)
@@ -49,7 +54,7 @@ plt.plot(y3_ary)
 plt.plot(y3_ary_filtered, linestyle='--')
 plt.ylim([0, imgH])
 plt.title('trend down')
-#plt.savefig('plot.png', dpi=512)
+plt.savefig(r'%s\%s.png'%(demoPath, 'plot'), dip=dpi)
 
 # generate image: rgb_uint8, gray_uint8, bool
 img1 = getBwImgByChartData(imgH, imgW, y1_ary, 'rgb')
@@ -78,10 +83,10 @@ plt.subplot(2,3,index)
 plt.imshow(img3, cmap=plt.cm.gray), plt.title('%g (bool)'%index)
 plt.subplot(2,3,index+3)
 plt.imshow(img3_filtered, cmap=plt.cm.gray), plt.title('%g_filtered'%index)
-#plt.savefig('subplot_img.png', dpi=512)
+plt.savefig(r'%s\%s.png'%(demoPath, 'subplot_img'), dip=dpi)
 
 rgb = [0,0,255]
-rgb_b = [0,200,0]
+rgb_b = [200,-50,0]
 rgb_demo = [102, 255, 255]
 row_num = 2
 col_num = 5
@@ -89,13 +94,13 @@ font_size = 20
 #font_size = 35
 gap_ver = 22
 #gap_ver = 40
-gap_hoz = 25
+gap_hoz = 50
 descp_height = font_size * 5
 imgH = 60
 imgW = 60
 img_list = []
-img_list.append([{'img': img1, 'title': 'v1', 'rgb': [0,0,200], 'rgb_b': rgb_b},
-                 {'img': img2, 'title': 'v2', 'rgb': rgb, 'rgb_b': [0,100,0]},
+img_list.append([{'img': img1, 'title': 'v1', 'rgb': [255,0,0], 'rgb_b': rgb_b},
+                 {'img': img2, 'title': 'v2', 'rgb': rgb, 'rgb_b': [100,0,-50]},
                  {},
                  {'img': img3, 'title': 'v3', 'rgb': rgb, 'rgb_b': rgb_b},
                  {}])
@@ -109,50 +114,23 @@ descp_text.append([{'text': 'descp1: xx', 'rgb': rgb, 'rgb_b': rgb_b},
                    {'text': 'descp2: oo', 'rgb': rgb, 'rgb_b': rgb_b},
                    {},
                    {},
-                   {'text': 'kernel ver.: %s'%('0.0.1'), 'rgb': rgb, 'rgb_b': rgb_b}])
+                   {'text': 'kernel ver.: %s'%('0.0.1'), 'rgb': rgb, 'rgb_b': [100,0,-50]}])
 descp_text.append([{'text': 'descp3: xx', 'rgb': rgb, 'rgb_b': rgb_b},
                    {},
                    {'text': 'other info: xx', 'rgb': rgb, 'rgb_b': rgb_b}])
 descp_test_start_y = [(imgH + gap_ver) * len(img_list), (imgH + gap_ver) * len(img_list)]
 descp_test_start_x = [0 + 5, (imgW + gap_hoz) * 2 + 5]
 
+tStart = time.time()
 mergedDemoImg = utility.getMergeDemoImgNoFont(rgb,rgb_b,rgb_demo,
                                               row_num,col_num,font_size,gap_ver,gap_hoz,
                                               descp_height,imgH,imgW,
                                               img_list,descp_text,descp_test_start_y,descp_test_start_x)
+tEnd = time.time()
+print('Elapsed time is %g seconds.'%(tEnd-tStart))
+
 utility.imshow(mergedDemoImg, 'mergedDemoImg')
-
-# prepare data
-#row_num = 2
-#col_num = 5
-#imgH = 60
-#imgW = 60
-#img_list = [[img1, img2, [], img3, []], [img1_filtered, img2_filtered, [], img3_filtered, []]]
-#title_list = [['v1', 'v2', [], 'v3'], ['v1.filter', 'v2.filter', [], 'v3.filter', []]]
-#gap_ver = 22
-#gap_hoz = 25
-##font_path = ''
-#font_path = r'.\demo\font\1_Minecraft-Regular.otf'
-##font_path = r'.\demo\font\pixelmix-1.ttf'
-#font_size = 20
-#font_rgb = [0, 0, 255]
-#font_background_rgb = [0, 200, 0]
-#demo_background_rgb = [102, 255, 255]
-#append_height = font_size * 5
-#descp_text = [['prob_v1: xx', 'prob_v2: oo', '', '', 'kernel ver.: %s'%('1.6.1')],
-#               ['prob_v3: xx', '', 'other info: xx']]
-#descp_test_start_y = [(imgH + gap_ver) * 2, (imgH + gap_ver) * 2]
-#descp_test_start_x = [0 + 5, (imgW + gap_hoz) * 2 + 5]
-#
-
-
-#mergedDemoImg = utility.getMergedDemoImg(row_num, col_num, imgH, imgW,
-#                                         img_list, title_list, gap_ver, gap_hoz,
-#                                         font_path, font_size, font_rgb, font_background_rgb,
-#                                         demo_background_rgb, append_height, descp_text,
-#                                         descp_test_start_y, descp_test_start_x)
-
-
+io.imsave(r'%s\%s.png'%(demoPath, 'mergedDemoImg'), mergedDemoImg)
 
 
 
