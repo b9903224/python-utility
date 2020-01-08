@@ -12,10 +12,16 @@ from .getImgSize import getImgSize
 from .imshow import imshow
 from .getStringImg_20 import getStringImg_20
 from .getHighLightImgByRange import getHighLightImgByRange
+from .getMergeDemoImgNoFont import getMergeDemoImgNoFont
 
 __all__ = ['printUniqueRatio',
            'getMergedDemoImg',
-           'getHighLightImg']
+           'getHighLightImg',
+           'getImgSize',
+           'imshow',
+           'getStringImg_20',
+           'getHighLightImgByRange',
+           'getMergeDemoImgNoFont']
 
 #__all__ = ['printUniqueRatio',
 #           'draw_haar_like_feature']

@@ -3,11 +3,15 @@
 import matplotlib.pyplot as plt
 import utility
 from skimage import transform
+import time
 
 plt.close('all')
 
 text = r'''abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`~!@#$%^&*()-_=+[{]}\|;:'",<.>/? 我'''
+tStart = time.time()
 stringImg = utility.getStringImg_20(text)
+tEnd = time.time()
+print('Elapsed time is %g seconds.'%(tEnd-tStart))
 stringImg2 = transform.rescale(stringImg, 1.5, order=0)
 utility.imshow(stringImg)
 
