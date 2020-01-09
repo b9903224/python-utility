@@ -27,7 +27,7 @@ plt.savefig(r'.\demo\getScaledImg\fig.png', dpi=512)
 figManager = plt.get_current_fig_manager()
 figManager.window.showMaximized()
 ```
-<img src="https://github.com/b9903224/python-utility/blob/master/demo/getScaledImg/fig.png" width="250px" />
+<img src="https://github.com/b9903224/python-utility/blob/master/demo/getScaledImg/fig.png" width="750px" />
 
 ## [getMergeDemoImgNoFont](utility/getMergeDemoImgNoFont.py)
 ```python
