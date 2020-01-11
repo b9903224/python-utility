@@ -10,7 +10,7 @@ import numpy as np
 
 def imshow(img, imgName='img', isFullScreen=False):
     plt.figure()
-    img.dtype
+#    img.dtype
     vmin = 0
     vmax = 1
     if img.dtype == np.bool:

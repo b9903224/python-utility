@@ -25,7 +25,7 @@ def getStringImg_20(text):
 def pruneImg(img):
     imgH, imgW = img.shape
     if not np.any(img):
-        img = np.zeros((imgH, 3), np.bool)
+        img = np.zeros((imgH, 5), np.bool)
     else:
         emptyCol = np.zeros((imgH, 1), np.bool)
         x_start, x_end = findMatrixFirstNonZero_LR(img)

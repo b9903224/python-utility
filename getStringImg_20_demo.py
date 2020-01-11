@@ -17,7 +17,7 @@ utility.imshow(stringImg)
 
 text = r'Hello World !'
 stringImg = utility.getStringImg_20(text)
-utility.imshow(stringImg).savefig('.\demo\getStringImg_20\stringImg_20_demo.png', dip=512)
+#utility.imshow(stringImg).savefig('.\demo\getStringImg_20\stringImg_20_demo.png', dip=512)
 text = r'a'
 stringImg = utility.getStringImg_20(text)
 utility.imshow(stringImg)
