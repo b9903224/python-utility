@@ -45,7 +45,7 @@ io.imsave(r'.\demo\insertSignature\lena_color_with_signature.png', img)
 #figure, imshow(img), title('img')
 #figure, imshow(img_uint8), title('img_uint8', 'interpreter', 'none')
 ```
-<img src="https://github.com/b9903224/python-utility/blob/master/demo/insertSignature/lena_color.gif" width="750px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/insertSignature/lena_color_with_signature.png" width="750px" />
+<img src="https://github.com/b9903224/python-utility/blob/master/demo/insertSignature/lena_color.gif" width="250px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/insertSignature/lena_color_with_signature.png" width="250px" />
 
 
 ## [getScaledImg](utility/getScaledImg.py)
