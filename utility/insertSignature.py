@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from skimage import transform
 
-def insertSignature(img, featVer='0.0.1', kernelVer='0.0.1-0', autherName='MCHSIAOJ', loc='R'):
+def insertSignature(img, featVer='0.0.1', kernelVer='0.0.1-0', autherName='MCHSIAOJ', loc='RD', sigBackRGB=[]):
     featureVerImg_bw = getVerImg_bw('Feature Ver.: %s'%(featVer))
     kernelVerStringImg_bw = getVerImg_bw('Kernel Ver.: %s'%(kernelVer))
     signatureImg_bw = getSigImg_bw(autherName)
@@ -26,45 +26,84 @@ def insertSignature(img, featVer='0.0.1', kernelVer='0.0.1-0', autherName='MCHSI
     imgH_f, imgW_f, imgZ_f = getImgSize(featureVerImg_bw)
     imgH_k, imgW_k, imgZ_k = getImgSize(kernelVerStringImg_bw)
     imgH_s, imgW_s, imgZ_s = getImgSize(signatureImg_bw)
-    if loc == 'R':
+    if loc == 'RD':
         yStart = (imgH-1) - imgH_s + 1
         yEnd = yStart + imgH_s - 1
         xStart = (imgW-1) - imgW_s + 1
         xEnd = imgW-1
-        img = insertHighLightImgByRange(img, signatureImg_bw,signatureImg_jet,yStart,yEnd,xStart,xEnd)
+        img = insertHighLightImgByRange(img, signatureImg_bw,signatureImg_jet,yStart,yEnd,xStart,xEnd, sigBackRGB)
         yStart = yStart - imgH_k + 1
         yEnd = yStart + imgH_k - 1
         xStart = (imgW-1) - imgW_k + 1
         xEnd = imgW-1
-        img = insertHighLightImgByRange(img, kernelVerStringImg_bw,kernelVerStringImg_jet,yStart,yEnd,xStart,xEnd)
+        img = insertHighLightImgByRange(img, kernelVerStringImg_bw,kernelVerStringImg_jet,yStart,yEnd,xStart,xEnd, [])
         yStart = yStart - imgH_f + 1
         yEnd = yStart + imgH_f - 1
         xStart = (imgW-1) - imgW_f + 1
         xEnd = imgW-1
-        img = insertHighLightImgByRange(img, featureVerImg_bw,featureVerImg_jet,yStart,yEnd,xStart,xEnd)
-    else:
+        img = insertHighLightImgByRange(img, featureVerImg_bw,featureVerImg_jet,yStart,yEnd,xStart,xEnd, [])
+    elif loc == 'RU':
+        yStart = 0
+        yEnd = yStart + imgH_f - 1
+        xStart = (imgW-1) - imgW_f + 1
+        xEnd = imgW-1
+        img = insertHighLightImgByRange(img, featureVerImg_bw,featureVerImg_jet,yStart,yEnd,xStart,xEnd, [])
+        yStart = yEnd + 1
+        yEnd = yStart + imgH_k - 1
+        xStart = (imgW-1) - imgW_k + 1
+        xEnd = imgW-1
+        img = insertHighLightImgByRange(img, kernelVerStringImg_bw,kernelVerStringImg_jet,yStart,yEnd,xStart,xEnd, [])
+        yStart = yEnd + 1
+        yEnd = yStart + imgH_s - 1
+        xStart = (imgW-1) - imgW_s + 1
+        xEnd = imgW-1
+        img = insertHighLightImgByRange(img, signatureImg_bw,signatureImg_jet,yStart,yEnd,xStart,xEnd, sigBackRGB)    
+    elif loc == 'LU':
+        yStart = 0
+        yEnd = yStart + imgH_f - 1
+        xStart = 0
+        xEnd = xStart + imgW_f - 1
+        img = insertHighLightImgByRange(img, featureVerImg_bw,featureVerImg_jet,yStart,yEnd,xStart,xEnd,[])
+        yStart = yEnd + 1
+        yEnd = yStart + imgH_k - 1
+        xStart = 0
+        xEnd = xStart + imgW_k - 1
+        img = insertHighLightImgByRange(img, kernelVerStringImg_bw,kernelVerStringImg_jet,yStart,yEnd,xStart,xEnd,[])
+        yStart = yEnd + 1
+        yEnd = yStart + imgH_s - 1
+        xStart = 0
+        xEnd = xStart + imgW_s - 1
+        img = insertHighLightImgByRange(img, signatureImg_bw,signatureImg_jet,yStart,yEnd,xStart,xEnd, sigBackRGB)
+    elif loc == 'LD':
         yStart = (imgH-1) - imgH_s + 1
         yEnd = yStart + imgH_s - 1
         xStart = 0
         xEnd = xStart + imgW_s - 1
-        img = insertHighLightImgByRange(img, signatureImg_bw,signatureImg_jet,yStart,yEnd,xStart,xEnd)
+        img = insertHighLightImgByRange(img, signatureImg_bw,signatureImg_jet,yStart,yEnd,xStart,xEnd, sigBackRGB)
         yStart = yStart - imgH_k + 1
         yEnd = yStart + imgH_k - 1
         xStart = 0
         xEnd = xStart + imgW_k - 1
-        img = insertHighLightImgByRange(img, kernelVerStringImg_bw,kernelVerStringImg_jet,yStart,yEnd,xStart,xEnd)
+        img = insertHighLightImgByRange(img, kernelVerStringImg_bw,kernelVerStringImg_jet,yStart,yEnd,xStart,xEnd,[])
         yStart = yStart - imgH_f + 1
         yEnd = yStart + imgH_f - 1
         xStart = 0
         xEnd = xStart + imgW_f - 1
-        img = insertHighLightImgByRange(img, featureVerImg_bw,featureVerImg_jet,yStart,yEnd,xStart,xEnd)
-    
+        img = insertHighLightImgByRange(img, featureVerImg_bw,featureVerImg_jet,yStart,yEnd,xStart,xEnd,[])
+    else:
+        pass
     return img
 
-def insertHighLightImgByRange(img, signatureImg_bw,signatureImg_jet,yStart,yEnd,xStart,xEnd):
+def insertHighLightImgByRange(img, signatureImg_bw,signatureImg_jet,yStart,yEnd,xStart,xEnd, sigBackRGB):
     
     img_sub = img[yStart:yEnd+1, xStart:xEnd+1, :]
     img_sub[signatureImg_bw, :] = signatureImg_jet[signatureImg_bw, :]
+    
+    if sigBackRGB:
+        signatureImg_bw_inv = np.invert(signatureImg_bw)
+        for ch in range(3):
+            img_sub[signatureImg_bw_inv, ch] = sigBackRGB[ch]
+    
     img[yStart:yEnd+1, xStart:xEnd+1, :] = img_sub
     return img
 
