@@ -54,7 +54,7 @@ plt.plot(y3_ary)
 plt.plot(y3_ary_filtered, linestyle='--')
 plt.ylim([0, imgH])
 plt.title('trend down')
-plt.savefig(r'%s\%s.png'%(demoPath, 'plot'), dip=dpi)
+#plt.savefig(r'%s\%s.png'%(demoPath, 'plot'), dip=dpi)
 
 # generate image: rgb_uint8, gray_uint8, bool
 img1 = getBwImgByChartData(imgH, imgW, y1_ary, 'rgb')
@@ -83,7 +83,7 @@ plt.subplot(2,3,index)
 plt.imshow(img3, cmap=plt.cm.gray), plt.title('%g (bool)'%index)
 plt.subplot(2,3,index+3)
 plt.imshow(img3_filtered, cmap=plt.cm.gray), plt.title('%g_filtered'%index)
-plt.savefig(r'%s\%s.png'%(demoPath, 'subplot_img'), dip=dpi)
+#plt.savefig(r'%s\%s.png'%(demoPath, 'subplot_img'), dip=dpi)
 
 rgb = [0,0,255]
 rgb_b = [200,-50,0]
@@ -130,7 +130,7 @@ tEnd = time.time()
 print('Elapsed time is %g seconds.'%(tEnd-tStart))
 
 utility.imshow(mergedDemoImg, 'mergedDemoImg')
-io.imsave(r'%s\%s.png'%(demoPath, 'mergedDemoImg'), mergedDemoImg)
+#io.imsave(r'%s\%s.png'%(demoPath, 'mergedDemoImg'), mergedDemoImg)
 
 
 

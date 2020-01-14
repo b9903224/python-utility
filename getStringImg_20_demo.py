@@ -12,8 +12,16 @@ tStart = time.time()
 stringImg = utility.getStringImg_20(text)
 tEnd = time.time()
 print('Elapsed time is %g seconds.'%(tEnd-tStart))
-stringImg2 = transform.rescale(stringImg, 1.5, order=0)
+#stringImg2 = transform.rescale(stringImg, 1.5, order=0)
 utility.imshow(stringImg)
+
+font = 'EightBitDragon_anqx'
+tStart = time.time()
+stringImg = utility.getStringImg_20(text,font=font)
+tEnd = time.time()
+print('Elapsed time is %g seconds.'%(tEnd-tStart))
+stringImg2 = transform.rescale(stringImg, 1.5, order=0)
+utility.imshow(stringImg,'font: %s'%(font))
 
 text = r'Hello World !'
 stringImg = utility.getStringImg_20(text)

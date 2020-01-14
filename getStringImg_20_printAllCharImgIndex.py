@@ -23,22 +23,27 @@ def getListString(input):
     output = '[' + output + ']'
     return output
 if __name__ == '__main__':
-    font_path = r'.\demo\font\EightBitDragon-anqx.ttf'
+#    font_path = r'.\demo\font\EightBitDragon-anqx.ttf'
+    font_path = r'.\demo\font\1_Minecraft-Regular.otf'
     font_size = 20
     font_rgb = [255,255,255]
     font = ImageFont.truetype(font_path, font_size)
     imgH = 20 # = font_size
     imgW = 20
+#    y_ori = 0
+    y_ori = -2
+    img_char_th = 90
     img_0 = getImgRGBSample(imgH, imgW)
+
     print('if False:\n    pass')
     for index, char in enumerate(text):
         img = np.copy(img_0)
         frame = Image.fromarray(img)
         draw = ImageDraw.Draw(frame)
-        draw.text((1,0), char, tuple(font_rgb), font=font)
+        draw.text((1,y_ori), char, tuple(font_rgb), font=font)
         img_char = np.array(frame)
         img_char = img_char[:,:,0]
-        rows, cols = np.nonzero(img_char)
+        rows, cols = np.nonzero(img_char > img_char_th)
         print('elif char == \'%s\':'%(char))
         print('%srows = %s'%(' '*4, getListString(rows)))
         print('%scols = %s'%(' '*4, getListString(cols)))
