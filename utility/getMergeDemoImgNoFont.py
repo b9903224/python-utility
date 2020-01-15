@@ -7,14 +7,15 @@ Created on Thu Jan  9 00:07:14 2020
 
 import numpy as np
 from skimage import transform
-from .getStringImg_20 import getStringImg_20
+#from .getStringImg_20 import getStringImg_20
+from .getStringImg_10 import getStringImg_10
 from .getHighLightImgByRange import getHighLightImgByRange
 
 def getMergeDemoImgNoFont(rgb,rgb_b,rgb_demo,
                           row_num,col_num,font_size,gap_ver,gap_hoz,
                           descp_height,imgH,imgW,
                           img_list,descp_text,descp_test_start_y,descp_test_start_x):
-    font_ratio = font_size/20
+    font_ratio = font_size/10
     mergedDemoImg = iniMergedDemoImg(row_num * (imgH + gap_ver) + descp_height,
                                      col_num * (imgW + gap_hoz), rgb_demo)
     mergedDemoImg = insert_img_list(mergedDemoImg, img_list, imgH, imgW, gap_ver, gap_hoz, font_ratio)
@@ -78,7 +79,7 @@ def insert_img_list(mergedDemoImg, img_list, imgH, imgW, gap_ver, gap_hoz, font_
     return mergedDemoImg
 
 def getStringImg(text, font_ratio):
-    stringImg = getStringImg_20(text)
+    stringImg = getStringImg_10(text)
     stringImg2 = transform.rescale(stringImg, font_ratio, order=0).astype(np.bool)
     return stringImg2
 

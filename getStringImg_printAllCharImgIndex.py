@@ -25,11 +25,11 @@ def getListString(input):
 if __name__ == '__main__':
 #    font_path = r'.\demo\font\EightBitDragon-anqx.ttf'
     font_path = r'.\demo\font\1_Minecraft-Regular.otf'
-    font_size = 20
+    font_size = 10
     font_rgb = [255,255,255]
     font = ImageFont.truetype(font_path, font_size)
-    imgH = 20 # = font_size
-    imgW = 20
+    imgH = font_size # = font_size
+    imgW = font_size
 #    y_ori = 0
     y_ori = -2
     img_char_th = 90

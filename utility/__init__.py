@@ -11,6 +11,7 @@ from .getHighLightImg import getHighLightImg
 from .getImgSize import getImgSize
 from .imshow import imshow
 from .getStringImg_20 import getStringImg_20
+from .getStringImg_10 import getStringImg_10
 from .getHighLightImgByRange import getHighLightImgByRange
 from .getMergeDemoImgNoFont import getMergeDemoImgNoFont
 from .getScaledImg import getScaledImg
@@ -21,6 +22,7 @@ __all__ = ['printUniqueRatio',
            'getImgSize',
            'imshow',
            'getStringImg_20',
+           'getStringImg_10',
            'getHighLightImgByRange',
            'getMergeDemoImgNoFont',
            'getScaledImg']
