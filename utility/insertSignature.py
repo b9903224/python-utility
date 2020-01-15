@@ -4,17 +4,20 @@ Created on Sat Jan 11 22:45:42 2020
 
 @author: b9903
 """
-from .getStringImg_20 import getStringImg_20
+#from .getStringImg_20 import getStringImg_20
+from .getStringImg_10 import getStringImg_10
 from .imshow import imshow
 from .getImgSize import getImgSize
 import matplotlib.pyplot as plt
 import numpy as np
 from skimage import transform
 
-def insertSignature(img, featVer='0.0.1', kernelVer='0.0.1-0', autherName='MCHSIAOJ', loc='RD', sigBackRGB=[]):
-    featureVerImg_bw = getVerImg_bw('Feature Ver.: %s'%(featVer))
-    kernelVerStringImg_bw = getVerImg_bw('Kernel Ver.: %s'%(kernelVer))
-    signatureImg_bw = getSigImg_bw(autherName)
+def insertSignature(img, featVer='0.0.1', kernelVer='0.0.1-0', autherName='MCHSIAOJ', loc='RD', sigBackRGB=[], fontSize=10):
+    font_ratio = fontSize/10
+    
+    featureVerImg_bw = getVerImg_bw('Feature Ver.: %s'%(featVer), font_ratio)
+    kernelVerStringImg_bw = getVerImg_bw('Kernel Ver.: %s'%(kernelVer), font_ratio)
+    signatureImg_bw = getSigImg_bw(autherName, font_ratio)
     
     jetColors = getJetColors()
     imgH, imgW, imgZ = getImgSize(img)
@@ -121,11 +124,14 @@ def getColorMapBackground(img_bw, jetColors, isShift=False):
     colorMapBackground = (colorMapBackground*255).astype(np.uint8)
     return colorMapBackground
 
-def getSigImg_bw(autherName):
-    sigImg_bw_pre = getStringImg_20(autherName)
+def getSigImg_bw(autherName, font_ratio):
+    sigImg_bw_pre = getStringImg_10(autherName)
+    sigImg_bw_pre = resizeBwImgByFontRatio(sigImg_bw_pre, font_ratio)
     sigImg_bw_pre = np.pad(sigImg_bw_pre, ((1,1), (1,1)), 'constant')
     sigImg_bw_pre = np.pad(sigImg_bw_pre, ((1,1), (1,1)), 'constant', constant_values = True)
-    sigImg_bw_post = getStringImg_20('DESIGNED')
+    
+    sigImg_bw_post = getStringImg_10('DESIGNED')
+    sigImg_bw_post = resizeBwImgByFontRatio(sigImg_bw_post, font_ratio)
     sigImg_bw_post = np.invert(sigImg_bw_post)
     sigImg_bw_post = np.pad(sigImg_bw_post, ((1,1), (1,1)), 'constant', constant_values = True)
     sigImg_bw_post = np.pad(sigImg_bw_post, ((1,1), (1,1)), 'constant', constant_values = True)
@@ -135,8 +141,15 @@ def getSigImg_bw(autherName):
     
     return signatureImg_bw
 
-def getVerImg_bw(inputStr):
-    verImg_bw = getStringImg_20(inputStr)
+def resizeBwImgByFontRatio(img, font_ratio):
+    if font_ratio != 1:
+        img = transform.rescale(img, font_ratio, order=0).astype(np.bool) # float64 to bool
+    return img
+
+def getVerImg_bw(inputStr, font_ratio):
+#    verImg_bw = getStringImg_20(inputStr)
+    verImg_bw = getStringImg_10(inputStr)
+    verImg_bw = resizeBwImgByFontRatio(verImg_bw, font_ratio)
     return verImg_bw
 
 def getJetColors():

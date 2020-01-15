@@ -19,15 +19,17 @@ tStart = time.time()
 img = io.imread(r'.\demo\insertSignature\lena_color.gif')[:,:,:3]
 
 sigBackRGB = [255,255,255]
-img = insertSignature(img, featVer='0.0.1', kernelVer='0.0.1-1')
+fontSize = 20
+#img = insertSignature(img, featVer='0.0.1', kernelVer='0.0.1-1')
 #img = insertSignature(img, featVer='0.0.1', kernelVer='0.0.1-1', loc='LD')
 #img = insertSignature(img, featVer='0.0.1', kernelVer='0.0.1-1', loc='RD')
 #img = insertSignature(img, featVer='0.0.1', kernelVer='0.0.1-1', loc='RU')
 #img = insertSignature(img, featVer='0.0.1', kernelVer='0.0.1-1', loc='LU')
 #img = insertSignature(img, featVer='0.0.1', kernelVer='0.0.1-1', loc='LD', sigBackRGB=sigBackRGB)
-#img = insertSignature(img, featVer='0.0.1', kernelVer='0.0.1-1', loc='RD', sigBackRGB=sigBackRGB)
+img = insertSignature(img, featVer='0.0.1', kernelVer='0.0.1-1', loc='RD', sigBackRGB=sigBackRGB)
 #img = insertSignature(img, featVer='0.0.1', kernelVer='0.0.1-1', loc='RU', sigBackRGB=sigBackRGB)
 #img = insertSignature(img, featVer='0.0.1', kernelVer='0.0.1-1', loc='LU', sigBackRGB=sigBackRGB)
+img = insertSignature(img, featVer='0.0.1', kernelVer='0.0.1-1', loc='LD', fontSize=fontSize)
 tEnd = time.time()
 print('Elapsed time is %g seconds.'%(tEnd-tStart))
 
