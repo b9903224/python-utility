@@ -324,7 +324,7 @@ if __name__ == '__main__':
 ```
 https://www.fontspace.com/chequered-ink/eight-bit-dragon
 <img src="https://github.com/b9903224/python-utility/blob/master/demo/font_template/font_template_EightBitDragon-anqx.png"/>
-Minecraft-Regular: recommend for 10 times font size, very beautiful 8-bit font
+Minecraft-Regular: recommend for 10 times font size, very beautiful 8-bit font, but don't have the character: `
 <img src="https://github.com/b9903224/python-utility/blob/master/demo/font_template/font_template_1_Minecraft-Regular_fontSize%3D20.png"/>
 
 ## [imshow](utility/imshow.py)
