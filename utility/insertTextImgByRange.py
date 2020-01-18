@@ -2,7 +2,7 @@
 """
 Created on Sat Jan 18 21:36:37 2020
 
-@author: b9903
+@author: mchsiaoj
 """
 
 from .getHighLightImgByRange import getHighLightImgByRange
