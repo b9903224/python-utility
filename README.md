@@ -33,7 +33,7 @@ dpi = 512
 utility.imshow(img, 'original').savefig(os.path.join(path, 'img_original.png'), dpi=dpi)
 utility.imshow(img_processed, 'processed').savefig(os.path.join(path, 'img_processed.png'), dpi=dpi)
 ```
-<img src="https://github.com/b9903224/python-utility/blob/master/demo/insertTextImgByRange/img_original.png" width="250px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/insertTextImgByRange/img_processed.png" width="250px" />
+<img src="https://github.com/b9903224/python-utility/blob/master/demo/insertTextImgByRange/img_original.png" width="500px" /><img src="https://github.com/b9903224/python-utility/blob/master/demo/insertTextImgByRange/img_processed.png" width="500px" />
 
 ## [insertSignature](utility/insertSignature.py)
 
