@@ -2,7 +2,7 @@
 """
 Created on Mon Sep 30 18:09:53 2019
 
-@author: b9903
+@author: mchsiaoj
 """
 
 from .printUniqueRatio import printUniqueRatio
@@ -13,6 +13,7 @@ from .imshow import imshow
 from .getStringImg_20 import getStringImg_20
 from .getStringImg_10 import getStringImg_10
 from .getHighLightImgByRange import getHighLightImgByRange
+from .insertTextImgByRange import insertTextImgByRange
 from .getMergeDemoImgNoFont import getMergeDemoImgNoFont
 from .getScaledImg import getScaledImg
 
@@ -24,6 +25,7 @@ __all__ = ['printUniqueRatio',
            'getStringImg_20',
            'getStringImg_10',
            'getHighLightImgByRange',
+           'insertTextImgByRange',
            'getMergeDemoImgNoFont',
            'getScaledImg']
 
