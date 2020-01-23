@@ -40,7 +40,7 @@ if __name__ == '__main__':
     ellipseBwImg = utility.getEllipseBwImg(imgH, imgW, 87-1, 685-1, 512, 30, -45, ellipseBwImg); 
     
     utility.imshow(ellipseBwImg, 'ellipseBwImg')
-    Image.fromarray(ellipseBwImg).save(os.path.join(demoPath, 'ellipseBwImg_python.png'))
+#    Image.fromarray(ellipseBwImg).save(os.path.join(demoPath, 'ellipseBwImg_python.png'))
     
     # check version difference between Matlab and python
     ellipseBwImg_version_xor = ellipseBwImg != ellipseBwImg_matlab
