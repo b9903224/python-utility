@@ -16,6 +16,7 @@ from .getHighLightImgByRange import getHighLightImgByRange
 from .insertTextImgByRange import insertTextImgByRange
 from .getMergeDemoImgNoFont import getMergeDemoImgNoFont
 from .getScaledImg import getScaledImg
+from .getEllipseBwImg import getEllipseBwImg
 
 __all__ = ['printUniqueRatio',
            'getMergedDemoImg',
@@ -27,7 +28,8 @@ __all__ = ['printUniqueRatio',
            'getHighLightImgByRange',
            'insertTextImgByRange',
            'getMergeDemoImgNoFont',
-           'getScaledImg']
+           'getScaledImg',
+           'getEllipseBwImg']
 
-#__all__ = ['printUniqueRatio',
-#           'draw_haar_like_feature']
+#from utility.insertSignature import insertSignature
+#from utility.getFontTemplateImg import getFontTemplateImg
