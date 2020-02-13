@@ -3,6 +3,46 @@
 
 commonly used package
 
+## [tictoc](utility/tictoc.py)
+timeit decorator like Matlab's tic toc
+```python
+import time
+from utility import tictoc
+import functools
+
+def yell(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        return func(*args, **kwargs) + '!'
+    return wrapper
+
+@tictoc
+@yell
+def say_hello(sleep_time, user, **kwargs):
+    time.sleep(sleep_time)
+    return f'Hello {user}'
+
+if __name__ == '__main__':
+    print(say_hello(3, 'Dan'))
+    
+    logtime_data = {}
+    print(say_hello(2, 'Jay', log_time=logtime_data))
+    print(logtime_data)
+    
+#    logtime_data = {}
+    print(say_hello(1, 'Lin', log_time=logtime_data, log_name='timeit_test'))
+    print(logtime_data)
+```
+
+```console
+say_hello(): Elapsed time is 3.00042 seconds.
+HELLO DAN!
+HELLO JAY!
+{'say_hello': 2.0002615451812744}
+HELLO LIN!
+{'say_hello': 2.0002615451812744, 'timeit_test': 1.0002663135528564}
+```
+
 ## [getEllipseBwImg](utility/getEllipseBwImg.py)
 insert binary ellipse image on binary image
 ```python
