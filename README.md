@@ -42,14 +42,7 @@ HELLO JAY!
 HELLO LIN!
 {'say_hello': 2.0002615451812744, 'timeit_test': 1.0002663135528564}
 ```
-```cmd
-say_hello(): Elapsed time is 3.00042 seconds.
-HELLO DAN!
-HELLO JAY!
-{'say_hello': 2.0002615451812744}
-HELLO LIN!
-{'say_hello': 2.0002615451812744, 'timeit_test': 1.0002663135528564}
-```
+
 ## [getEllipseBwImg](utility/getEllipseBwImg.py)
 insert binary ellipse image on binary image
 ```python
