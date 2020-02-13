@@ -17,6 +17,7 @@ from .insertTextImgByRange import insertTextImgByRange
 from .getMergeDemoImgNoFont import getMergeDemoImgNoFont
 from .getScaledImg import getScaledImg
 from .getEllipseBwImg import getEllipseBwImg
+from .tictoc import tictoc
 
 __all__ = ['printUniqueRatio',
            'getMergedDemoImg',
@@ -29,7 +30,8 @@ __all__ = ['printUniqueRatio',
            'insertTextImgByRange',
            'getMergeDemoImgNoFont',
            'getScaledImg',
-           'getEllipseBwImg']
+           'getEllipseBwImg',
+           'tictoc',]
 
 #from utility.insertSignature import insertSignature
 #from utility.getFontTemplateImg import getFontTemplateImg
