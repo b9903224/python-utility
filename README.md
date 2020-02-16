@@ -3,6 +3,29 @@
 
 commonly used package
 
+
+## [exception_dec](utility/exception_dec.py)
+exception decorator: wrap result and error message as dictionary
+```python
+import json
+#import re
+from utility.exception_dec import exception_dec
+
+@exception_dec
+def run(numerator, denominator):
+    result = numerator / denominator
+    return result
+
+if __name__ == '__main__':
+    result = run(1, 2) # result = {'result': 0.5, 'errMsg': ''}
+    result2 = run(1, 0) # result = {'result': None, 'errMsg': '...ZeroDivisionError: division by zero'}
+    result3 = run(2, 0) # result = {'result': None, 'errMsg': '...ZeroDivisionError: division by zero'}
+    
+    result_json = json.dumps(result)
+    result2_json = json.dumps(result2)
+    result3_json = json.dumps(result3)
+```
+
 ## [tictoc](utility/tictoc.py)
 timeit decorator like Matlab's tic toc
 ```python
